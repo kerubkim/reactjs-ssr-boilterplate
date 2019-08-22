@@ -1,5 +1,7 @@
 // Intended to ONLY run on the browser-side
 
+import "../assets/css/main.scss";
+
 import * as apiEndpoints from '../static/strings/apiEndpoints';
 
 // This is for webpack to bundle JS event handlers, onClicks, etc..

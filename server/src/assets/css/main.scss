@@ -1,0 +1,19 @@
+/* ************************ */
+/*  SCSS overrides go here  */
+/* ************************ */
+// Example framework css override
+// $primary: teal;
+
+/* ************************* */
+/*  stylesheet imports here  */
+/* ************************* */
+// * NEED TO IMPORT FRONT-END FRAMEWORK
+// Example import
+// @import "~bootstrap/scss/bootstrap"; // <-- go into node_modules/bootstrap (bootstrap can be any front-end css framework)
+
+/* ************************* */
+/*     normal css go here    */
+/* ************************* */
+h3 {
+    color: red;
+}
