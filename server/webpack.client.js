@@ -8,11 +8,14 @@ const baseConfig = require('./webpack.base.js');
 const config = {
 
     // Tell webpack the root file of our client applications. Entry point
-    entry: './src/client/client.js',
+    entry: {
+        bundle: './src/client/client.js', // App bundle
+        main: './src/assets/js/main.js' // custom js
+    },
 
     // Tell webpack where to put the output bundle(build) that is generated
     output: {
-        filename: 'bundle.js',
+        filename: '[name].js',
         path: path.resolve(__dirname, 'public')
     },
 
