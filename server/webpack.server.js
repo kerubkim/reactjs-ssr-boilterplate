@@ -23,7 +23,7 @@ const config = {
     },
 
     // Tell webpack to bundle all SCSS to a file
-    plugins: [new MiniCssExtractPlugin({filename: "[name].css"})],
+    plugins: [new MiniCssExtractPlugin({filename: "assets/css/[name].css"})],
 
     // Tells webpack not to bundle any node_modules import for server side bundle
     externals: [webpackNodeExternals()]
