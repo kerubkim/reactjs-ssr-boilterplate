@@ -1,3 +1,5 @@
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
 module.exports = {
 
     // tell webpack to run babel on every file
@@ -26,6 +28,14 @@ module.exports = {
                         ['@babel/env', { targets: { browsers: ['last 2 versions'] }}]
                     ]
                 }
+            },
+            {
+                test: /\.scss$/,
+                use: [
+                    MiniCssExtractPlugin.loader, // 3. Inject <style> into DOM
+                    "css-loader", // 2. turns css into JS
+                    "sass-loader" // 1. Turns sass into css
+                ]
             }
         ]
     }

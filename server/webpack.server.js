@@ -1,5 +1,6 @@
 const path = require('path');
 const merge = require('webpack-merge');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const baseConfig = require('./webpack.base.js');
 
 const webpackNodeExternals = require('webpack-node-externals');
@@ -17,6 +18,9 @@ const config = {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'build')
     },
+
+    // Tell webpack to bundle all SCSS to a file
+    plugins: [new MiniCssExtractPlugin({filename: "[name].css"})],
 
     // Tells webpack not to bundle any node_modules import for server side bundle
     externals: [webpackNodeExternals()]
