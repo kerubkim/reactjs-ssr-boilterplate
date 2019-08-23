@@ -32,7 +32,12 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: [
-                    MiniCssExtractPlugin.loader, // 3. Inject <style> into DOM
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                            publicPath: "/"
+                        }
+                    }, // 3. Extract CSS into file
                     "css-loader", // 2. turns css into JS
                     "sass-loader" // 1. Turns sass into css
                 ]
@@ -49,7 +54,12 @@ module.exports = {
             },
             {
                 test: /\.(woff|woff2|eot|ttf|otf)$/,
-                use: ["file-loader"]
+                use: {
+                    loader: "file-loader",
+                    options: {
+                        outputPath: "assets/fonts"
+                    }
+                }
             }
         ]
     }

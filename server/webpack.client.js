@@ -20,7 +20,7 @@ const config = {
     },
 
     // Tell webpack to bundle all SCSS to a file
-    plugins: [new MiniCssExtractPlugin({filename: "[name].css"})]
+    plugins: [new MiniCssExtractPlugin({filename: "assets/css/[name].css"})]
 
 };
 
