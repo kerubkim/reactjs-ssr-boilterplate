@@ -36,6 +36,20 @@ module.exports = {
                     "css-loader", // 2. turns css into JS
                     "sass-loader" // 1. Turns sass into css
                 ]
+            },
+            {
+                test: /\.(png|svg|jpg|gif)$/,
+                use: {
+                    loader: "file-loader",
+                    options: {
+                        name: "[name].[hash].[ext]",
+                        outputPath: "assets/img"
+                    }
+                }
+            },
+            {
+                test: /\.(woff|woff2|eot|ttf|otf)$/,
+                use: ["file-loader"]
             }
         ]
     }
