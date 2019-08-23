@@ -40,6 +40,7 @@ export default (req, store, context) => {
             <head>
                 ${helmet.title.toString()}
                 ${helmet.meta.toString()}
+                <!-- remove materialize link to replace with npm bootstrap -->
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
                 <link rel="stylesheet" href="main.css" />
             </head>
@@ -50,6 +51,7 @@ export default (req, store, context) => {
                     window.INITIAL_STATE = ${serialize(store.getState())}
                 </script>
                 <script src="bundle.js"></script>
+                <script src="main.js"></script>
             </body>
         </html>
     `;
