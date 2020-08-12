@@ -45,7 +45,7 @@
     "react-router-dom": "5.0.1",
     "redux": "4.0.4",
     "redux-thunk": "2.3.0",
-    "serialize-javascript": "1.7.0",
+    "serialize-javascript": "4.0.0",
     "style-loader": "^1.0.0",
     "webpack": "4.37.0",
     "webpack-dev-server": "3.7.2",
